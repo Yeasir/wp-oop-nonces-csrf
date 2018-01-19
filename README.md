@@ -146,19 +146,27 @@ $csrf_refer_field = $Wp_Csrf_Nonce->wp_oop_nonce_csrf_referer_field($echo);
 $ CD /wordpress/your-theme-folder/wp-oop-nonces-csrf
 
 ```
-2. Run Composer Update
+2. Install PHP Unit on dev
+```php
+
+$ composer require --dev phpunit/phpunit:~5
+
+```
+3. Copy the Test Directory from "/vendor/ympervej/wp-oop-nonces-csrf/tests" to "your-theme-folder/wp-oop-nonces-csrf"
+
+4. Run Composer Update
 ```php
 
 $ composer update
 
 ```
-3. Run This in Terminal
+5. Run This in Terminal to test
 ```php
 
 $ ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/WpOopCsrfTest
 
 ```
-4. You can also test with this
+6. You can also test with this
 ```php
 
 $ ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests
@@ -170,4 +178,4 @@ $ ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests
 
 ## License
 
-[GPL](http://www.gnu.org/licenses/gpl-2.0.html)
+[MIT](https://opensource.org/licenses/MIT)
